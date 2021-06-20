@@ -42,7 +42,7 @@
        
 </table>
 <div class="first">
-<form action="#" method="post">
+<form action="signupcheck.php" method="post">
 <fieldset>
                 <legend><h3>Registation</h3></legend>
                 
