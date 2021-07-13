@@ -9,6 +9,7 @@
     .first{
         margin: 0 auto;
         width: 50%;
+       
     }
     </style>
 </head>
@@ -31,14 +32,14 @@
 </table>
 <hr>
 <div class="first">
-<form action="#" method="post">
+<form action="signincheck.php" method="post">
 <fieldset>
                 <legend><h3>LOGIN</h3></legend>
                 
 					<center>
                     <lebel class="lb">User Name:</lebel><input type="text" value="" name="username">
                     
-                   <br> <br><lebel>Password:</lebel><input type="password" value="" name="">
+                   <br> <br><lebel>Password:</lebel><input type="password" value="" name="password">
                    <hr>
                   <input type="checkbox" name="checkbox" value="remember me"> <lebel>Remember me</lebel><br>
                   <input type="submit" value="Submit" name="submit">

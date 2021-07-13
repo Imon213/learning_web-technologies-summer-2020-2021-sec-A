@@ -1,6 +1,10 @@
 <?php
 session_start();
+if(isset($_SESSION['flag']))
+{
+    
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,15 @@ session_start();
         border-height:400px;
        
     }
-    
+    .profilepic{
+        height:80px;
+        width:80px;
+        margin-left:80px;
+        margin-top:1s0px;
+    }
+    .input{
+        margin-left:80px;
+    }
     </style>
 </head>
 <body>
@@ -26,7 +38,7 @@ session_start();
   <td width="10%"><img src="download.png"></td>
             <td width="60%"> <h1>xCompany</h1></td>
             <td align="right">Logged in as <?=$_SESSION['user']['username']?></td>
-            <td align="center"><a href="logout.php">Logout</a>
+            <td align="center"><a href="logout_check.php">Logout</a>
  
   </tr>
   <tr>
@@ -42,21 +54,20 @@ session_start();
  <li> <a href="editprofile.php">Edit Profile</a></li>
  <li> <a href="changeprofilepic.php">Change Profile Picture</a></li>
  <li> <a href="changepass.php">Change Password</a></li>
- <li> <a href="logout.php">Logout</a></li>
+ <li> <a href="logout_check.php">Logout</a></li>
   </ul>
   </div>
   
   </td>
-  <td>
-    <fieldset>
-    <legend>PROFILE</legend>
-    <label>Name: </label><label><?=$_SESSION['user']['username']?></label><hr>
-    <label>Email: </label><label><?=$_SESSION['user']['email']?><hr>
-    <img src="helpline.jpg" class="pimage" name="pimage">
-   
-    <label>Date of Birth: </label><label><?=$_SESSION['user']['dob']?>
-    
-    </fieldset>
+  <td valign="top">
+  
+  <form action="pro_pic_change_check" method="POST" >
+  <img src="helpline.jpg" class="profilepic" name="profilepic">
+  <br><input type="file" accept="image/*" name="profilepic" class="input"><br><hr>
+  <input type="submit" value="Submit" name="submit" class="input">
+  </form>
+  
+  </td>
   </tr>
   <tr align="center">
   <td colspan="4">
@@ -65,3 +76,12 @@ session_start();
   </tr>
   </border>  
 </body>
+</html>
+<?php
+
+}
+else{
+  header('location:login.php');
+}
+
+?>

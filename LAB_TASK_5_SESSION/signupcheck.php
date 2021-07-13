@@ -7,9 +7,10 @@ if(isset($_POST['submit']))
    $uname=$_POST['username'];
    $password=$_POST['password'];
    $conPass=$_POST['confirm_password'];
+   $dob=$_POST['dob'];
    if($name!='' && $email!='' && $uname!='' && $password!='' && $conPass!='')
    {
-       $user=['name'=>$name,'email'=>$email,'username'=>$uname,'password'=>$password,'confirmpassword'=>$conPass];
+       $user=['name'=>$name,'email'=>$email,'username'=>$uname,'password'=>$password,'confirmpassword'=>$conPass,'dob'=>$dob];
        $_SESSION['user']=$user;
        header('location:login.php');
    }
