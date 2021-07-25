@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1"></h1>
+    <label><h3>Name</h3></label>
+    <input id="name" type="text" name="name" value="" onkeyup="getName()" /><br><br>
+	<button onclick="getName()">Submit</button> 
+    <script>
+       
+      function getName(){
+			let name = document.getElementById('name').value;
+            let result=document.getElementById('head1');
+            if(name=='')
+            {
+                result.innerHTML='Null value'
+            }
+
+			else if(name.length<2){
+				document.getElementById('head1').innerHTML = 'String length less than 2';
+			}else{
+				alert('Form submission Successfuly Compleated');
+			}
+		}
+	
+        </script>
+</body>
+</html>
