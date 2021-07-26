@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1"></h1>
+   
+    <input id="male" type="radio" name="gender" value="male" onkeyup="getGender()" />Male
+    <input id="female" type="radio" name="gender" value="female" onkeyup="getGender()" />Female
+    <input id="others" type="radio" name="gender" value="others" onkeyup="getGender()" />Others
+    <button onclick="getGender()">Submit</button> 
+	
+    <script>
+       
+      function getGender(){
+			let g1 = document.getElementById('male').value;
+            let g2 = document.getElementById('female').value;
+            let g3 = document.getElementById('others').value;
+            
+            let gender=document.getElementById('head1');
+
+            if(g1.checked=false && g2.checked==false && g3.checked==false)
+            {
+                result.innerHTML='Null value'
+            }
+
+			else{
+				alert('Form submission Successfuly Compleated');
+			}
+		}
+	
+        </script>
+</body>
+</html>
