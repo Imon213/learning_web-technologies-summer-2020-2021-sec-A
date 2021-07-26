@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1"></h1>
+    <label><h3>Email</h3></label>
+    <input id="email" type="email" name="email" value="" onkeyup="getEmail()" /><br><br>
+	<button onclick="getEmail()">Submit</button> 
+    <script>
+       
+      function getEmail(){
+			let email = document.getElementById('email').value;
+            let result=document.getElementById('head1');
+            if(email=='')
+            {
+                result.innerHTML='Null value'
+            }
+
+			else{
+				alert('Form submission Successfuly Compleated');
+			}
+		}
+	
+        </script>
+</body>
+</html>
