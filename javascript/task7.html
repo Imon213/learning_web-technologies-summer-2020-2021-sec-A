@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1"></h1>
+    <label><h3>Date of Birth</h3></label>
+    <input id="id" type="number" name="id" value="" onkeyup="getID()" /><br><br>
+    <input type="file" accept="img/*" id="image" value="" name="img" onkeyup="getID()">
+	<button onclick="getID()">Submit</button> 
+    <script>
+       
+      function getID(){
+			let id = document.getElementById('id').value;
+            let img = document.getElementById('image').value;
+            let result=document.getElementById('head1');
+            if(id=="" && img=="")
+            {
+                result.innerHTML='Informatin missing'
+            }
+
+			else{
+				alert("Successfully Information submitted");
+			}
+		}
+	
+        </script>
+</body>
+</html>
