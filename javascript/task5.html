@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="HSC" value="HSC" id="hsc">HSC
+    <input type="checkbox" name="SSC" value="SSC" id="ssc">SSC
+    <input type="checkbox" name="Bsc" value="Bsc" id="bsc">Bsc<br><br>
+    <input type="submit" value="submit" onclick="submit()">
+    <script>
+      function submit()
+       {
+        let result1=document.getElementById('hsc');
+        let result2=document.getElementById('ssc');
+        let result3=document.getElementById('bsc');
+        let p="";
+        if(result1.checked==true)
+        {
+            p=result1.value;
+        }
+        else if(result2.checked==true){ 
+            p=result2.value;
+        }
+        else if(result3.checked==true)
+        {
+            p=result3.value;
+        }
+        else
+        {
+            alert("please select any option");
+        }
+        alert(p);
+       }
+
+    </script>
+</body>
+</html>
