@@ -59,6 +59,7 @@
             </td>
             <td>
                <select name="bg">
+                   <option value="select your blood group">Select Your Blodd Group</option>
                     <option value="A+">A+</option>
                     <option value="B+">B+</option>
                     <option value="AB+">AB+</option>
@@ -99,21 +100,58 @@
 <script>
    function validForm()
    {
-       let name=document.forms["form"]["name"];
-       let email=document.forms["form"]["email"];
-       let gender=document.forms["form"]["Gender"];
-       let dob=document.forms["form"]["dob"];
-       let degree=document.forms["form"]["degree"];
-       let img=document.forms["form"]["img"];
-       let bg=document.forms['form']["bg"];
-       if(name.value=="" || email.value==" "||  gender.checked==false || dob.value==""|| bg.selectedIndex<1 || degree.checked==false ||  img.value==false)
+       let name=document.form.name;
+       let email=document.form.email;
+       let gender=document.form.Gender;
+       let dob=document.form.dob;
+       let degree=document.form.degree;
+       let img=document.form.img;
+       let bg=document.form.bg;
+       let result=false;
+       for(let i=0;i<=degree.length-1;i++)
        {
-           alert("Informatin missing");
+           
+        if(degree[i].checked)
+       {
+          result=true;
+       }
+    }
+       if(name.value.length<=0)
+       {
+           alert("Name is required");
+           name.focus();
+       }
+       else if(email.value.length<=0)
+       {
+           alert("Email is required");
+       }
+       else if(gender.value.length<=0)
+       {
+           alert("Gender is required");
+       }
+       else if(dob.value.length<=0)
+       {
+           alert("Date of Birth is required");
+       }
+       else if(bg.value=="select your blood group")
+       {
+           alert("Blood group is required");
+       }
+       
+       else if(result==false)
+       {
+            alert("Degree is required");
+       }
+       else if(img.value.length<=0)
+       {
+           alert("image is required");
        }
        else
        {
-          alert("Successfuly Submitted");
+           alert("form successfuly submitted");
        }
+    
+
 
 
 
