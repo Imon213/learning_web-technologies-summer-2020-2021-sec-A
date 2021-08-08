@@ -69,7 +69,8 @@
          </div>
     </td>
     <td align="center">
-    
+    <input type="text" id="search" name="search" value="" placeholder="Enter Employee name">
+    <button id="search" onclick="search()">Search</button>
     </tr>
     <tr height="50px">
     <td colspan="3" align="center">
